@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shopping Quest</string>
+    <string name="Password">Пароль</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="button_register">Отправить</string>
+    <string name="password_confirm">Подтверждение пароля</string>
+    <string name="user_name">Ваше имя</string>
+</resources>
