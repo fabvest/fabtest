@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements Callback<User> {
                 .build();
 
         testAPI = retrofit.create(SQApi.class);
+
+//        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+//        imageView.setImageResource(R.drawable.logo);
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
