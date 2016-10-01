@@ -13,7 +13,6 @@ import com.example.fab.restsqtest.API.SQApi;
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,7 +20,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Callback<User> {
 
     Retrofit retrofit;
     SQApi testAPI;
@@ -48,11 +47,8 @@ public class MainActivity extends AppCompatActivity {
         user.first_name = ((EditText)findViewById(R.id.editTextUserName)).getText().toString();
         user.password = ((EditText)findViewById(R.id.editTextPass)).getText().toString();
         user.password2 = ((EditText)findViewById(R.id.editTextPass2)).getText().toString();
-        if(!Objects.equals(user.password, user.password2)){
-            Toast.makeText(MainActivity.this, "Пароли не совпадают" , Toast.LENGTH_SHORT).show();
-        }
         Call<User> call = testAPI.createUser(user);
-        call.enqueue((Callback<User>) this);
+        call.enqueue(this);
     }
 
 
