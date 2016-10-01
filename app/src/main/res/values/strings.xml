@@ -5,4 +5,7 @@
     <string name="button_register">Отправить</string>
     <string name="password_confirm">Подтверждение пароля</string>
     <string name="user_name">Ваше имя</string>
+    <string name="button_authorization_reg">Авторизация</string>>
+    <string name="authorization">Авторизация</string>
+    <string name="regist">Регистрация</string>
 </resources>

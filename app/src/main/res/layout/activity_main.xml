@@ -46,6 +46,8 @@
         android:layout_height="wrap_content"
         android:text="@string/button_register"
         android:id="@+id/buttonSend"
+
+
         android:onClick="sendUserData"
         android:layout_below="@+id/editTextPass2" android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" android:layout_alignRight="@+id/ResponseText"
@@ -75,6 +77,15 @@
         android:id="@+id/imageView"
         android:src="@drawable/logo"
         android:layout_above="@+id/editTextPass"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_authorization_reg"
+        android:onClick="onClick"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

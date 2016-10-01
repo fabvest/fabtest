@@ -1,7 +1,6 @@
 package com.example.fab.restsqtest;
 
-import android.annotation.TargetApi;
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -39,11 +38,12 @@ public class MainActivity extends AppCompatActivity implements Callback<User> {
 
         testAPI = retrofit.create(SQApi.class);
 
+
 //        ImageView imageView = (ImageView) findViewById(R.id.imageView);
 //        imageView.setImageResource(R.drawable.logo);
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
+
     public void sendUserData(View view) throws IOException {
         User user = new User();
         user.phone_number = ((EditText)findViewById(R.id.editTextPhone)).getText().toString();
@@ -53,6 +53,13 @@ public class MainActivity extends AppCompatActivity implements Callback<User> {
         user.password2 = ((EditText)findViewById(R.id.editTextPass2)).getText().toString();
         Call<User> call = testAPI.createUser(user);
         call.enqueue(this);
+
+        Intent intent = new Intent(this, menuActivity.class);
+        startActivity(intent);
+    }
+    public void onClick(View view) throws IOException{
+        Intent newIntent = new Intent(this, AuthorizationActivity.class);
+        startActivity(newIntent);
     }
 
 
