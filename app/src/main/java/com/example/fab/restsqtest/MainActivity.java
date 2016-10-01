@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements Callback<User> {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //loggingjjkP
+        //fghj
 
         retrofit = new Retrofit.Builder()
                 .baseUrl("http://shopquest-rudolf.rhcloud.com/api/")
